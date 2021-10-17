@@ -9,3 +9,8 @@ function getData() {
       resultDisplay.innerHTML = data.result.short_link;
     });
 }
+
+const copyToClipboard = (e) => {
+  let textToCopy = resultDisplay.innerHTML;
+  navigator.clipboard.writeText(textToCopy);
+};
